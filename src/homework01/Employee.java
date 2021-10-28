@@ -1,4 +1,4 @@
-package homeWork01;
+package homework01;
 
 public abstract class Employee {
     private int age;

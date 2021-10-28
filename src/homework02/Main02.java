@@ -1,9 +1,9 @@
-package homeWork02;
+package homework02;
 
-import homeWork01.Developer;
-import homeWork01.Employee;
-import homeWork01.Junior;
-import homeWork01.ProjectManager;
+import homework01.Developer;
+import homework01.Employee;
+import homework01.Junior;
+import homework01.ProjectManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,6 +11,39 @@ import java.util.stream.Collectors;
 
 public class Main02 {
     public static void main(String[] args) {
+        //Задание 1
+        var employeeTwo = new Employee("Billi", 42) {
+            private String telephoneNumber;
+            private int age;
+
+            public String callMe(){
+                return telephoneNumber;
+            }
+
+            public void tellAge(){
+                System.out.println(this.getName() + " speaks " + age + " years.");
+            }
+
+            public String getTelephoneNumber() {
+                return telephoneNumber;
+            }
+
+            public void setTelephoneNumber(String telephoneNumber) {
+                this.telephoneNumber = telephoneNumber;
+            }
+
+            public int getAge() {
+                return age;
+            }
+
+            public void setAge(int age) {
+                this.age = age;
+            }
+        };
+        employeeTwo.setTelephoneNumber("0000");
+        employeeTwo.setAge(30);
+        employeeTwo.tellAge();
+
         //Задание 2.а)
         List<Employee> employees = new ArrayList<>();
         employees.add(new ProjectManager("Boss", 40));
@@ -32,4 +65,7 @@ public class Main02 {
         employees.stream().map(Employee::getName).forEach(System.out::println);
 
     }
+
+
+
 }

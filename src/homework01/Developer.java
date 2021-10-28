@@ -1,4 +1,4 @@
-package homeWork01;
+package homework01;
 
 public class Developer extends Employee{
     private int number;
